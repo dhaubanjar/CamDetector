@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "157183663960",
+    "firebase_url": "https://camdetector-21637.firebaseio.com",
+    "project_id": "camdetector-21637",
+    "storage_bucket": "camdetector-21637.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157183663960:android:3f1a449917edf7fb",
+        "android_client_info": {
+          "package_name": "com.samriddhi_android.www.camdetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157183663960-kuobpg7v02b7ulvt66tk17b76tvddf99.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "157183663960-kuobpg7v02b7ulvt66tk17b76tvddf99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn9c5Bl8CLiblVLRf90P1yQ71F5Umq2Jk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
