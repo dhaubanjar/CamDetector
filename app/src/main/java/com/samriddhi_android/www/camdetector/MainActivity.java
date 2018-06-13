@@ -22,6 +22,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    String mytext;
     ImageView imv;
     Button detect, snap;
     Bitmap bmv;
@@ -39,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
         snap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Picture Snapped Successfully.", Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(i,CODE);
+
             }
         });
 
@@ -58,7 +61,12 @@ public class MainActivity extends AppCompatActivity {
                             for (FirebaseVisionText.Block myblock:firebaseVisionText.getBlocks()){
                                 displaydata=displaydata+myblock.getText()+"\n";
                             }
-                            tv.setText(displaydata);
+                            mytext=displaydata;
+                            Intent i=new Intent(MainActivity.this,TTS.class);
+                            i.putExtra("data",mytext);
+                            Toast.makeText(MainActivity.this, "Text Detected Successfully.", Toast.LENGTH_SHORT).show();
+                            startActivity(i);
+
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -82,4 +90,5 @@ public class MainActivity extends AppCompatActivity {
             imv.setImageBitmap(bmv);
         }
     }
+
 }
